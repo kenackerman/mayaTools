@@ -1,12 +1,18 @@
 import maya.cmds as cmds
 
-#This command is meant to be assigned to a hotkey. It will only work if you have the modeleditor selected. It toggles Nurbs Curves on and off. It used to be an explicit command in maya but at some point it changed.
-# Ken Ackerman 2016
+'''
+Ken Ackerman 2016
+This command toggles Nurbs Curves on and off. 
+The purpose is to make the animation process more efficient when working with rigs that utilize nurbsCurves as controls heavily.
+It used to be built in to maya, but at some point the command to toggle these on and off was removed??
+It uses the "withFocus" parameter so it works on the panel you have active.
+This works well as a shelf button, but even better when mapped to a hotkey.
+'''
 
 def toggleNurbsCurves():
 
 
-    myPanel = cmds.getPanel(wf = True)
+    myPanel = cmds.getPanel(withFocus = True)
 
     
     if(cmds.modelEditor(myPanel, query = True, nurbsCurves = True)):
