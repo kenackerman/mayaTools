@@ -1,7 +1,7 @@
 def ka_trailToCurve():
 
     # This command can be used to convert motion trails into curves
-    # this is useful when you want to parent something to, say, a camera path
+    # this is useful when you want to attach a motionpath to, say, a bird, and have it fly close to the camera
     # I adapted this for python from a script on creativeCrash by user Joojaa
     
     import maya.cmds as cmds
